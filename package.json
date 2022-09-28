@@ -9,9 +9,8 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
-    "build": "npm run build --prefix client",
-    "install": "npm install && npm install --prefix client",
-    "render-build": "npm run install && npm run build"
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "render-build": "npm install && npm run build"
   },
   "author": "George Escobar",
   "license": "MIT",
